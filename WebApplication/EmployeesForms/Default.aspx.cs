@@ -10,12 +10,12 @@ namespace EmployeesForms
 {
     public partial class _Default : Page
     {
-        public EmployeesDBEntities db { get; private set; }
+        public JobsEmployeesEntities db { get; private set; }
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (db == null)
-                db = new EmployeesDBEntities();    
+                db = new JobsEmployeesEntities();    
         }
 
         protected void JobsDataSource_ContextCreating(object sender, EntityDataSourceContextCreatingEventArgs e)

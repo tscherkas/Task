@@ -22,6 +22,24 @@ namespace EmployeesForms {
         protected global::System.Web.UI.WebControls.TextBox FirstNameTextBox;
         
         /// <summary>
+        /// FirstNameRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FirstNameRequiredFieldValidator;
+        
+        /// <summary>
+        /// FirstNameRegularExpressionValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator FirstNameRegularExpressionValidator;
+        
+        /// <summary>
         /// LastNameTextBox control.
         /// </summary>
         /// <remarks>
@@ -29,6 +47,24 @@ namespace EmployeesForms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox LastNameTextBox;
+        
+        /// <summary>
+        /// LastNameRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator LastNameRequiredFieldValidator;
+        
+        /// <summary>
+        /// LastNameRegexFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator LastNameRegexFieldValidator;
         
         /// <summary>
         /// SalaryTextBox control.
@@ -40,6 +76,24 @@ namespace EmployeesForms {
         protected global::System.Web.UI.WebControls.TextBox SalaryTextBox;
         
         /// <summary>
+        /// SalaryRequiredFieldValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator SalaryRequiredFieldValidator;
+        
+        /// <summary>
+        /// SalaryRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator SalaryRangeValidator;
+        
+        /// <summary>
         /// JobDropDownList control.
         /// </summary>
         /// <remarks>
@@ -49,15 +103,6 @@ namespace EmployeesForms {
         protected global::System.Web.UI.WebControls.DropDownList JobDropDownList;
         
         /// <summary>
-        /// JobsDataSource control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.EntityDataSource JobsDataSource;
-        
-        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>
@@ -65,5 +110,14 @@ namespace EmployeesForms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// JobsDataSource control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.EntityDataSource JobsDataSource;
     }
 }

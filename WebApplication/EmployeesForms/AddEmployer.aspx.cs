@@ -10,32 +10,34 @@ namespace EmployeesForms
     public partial class AddEmployer : System.Web.UI.Page
     {
         public int jobNumber { get; set; }
-        public EmployeesDBEntities db { get; set; }
+        public JobsEmployeesEntities db { get; set; }
+        public Employees model { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            db = new EmployeesDBEntities();
+            db = new JobsEmployeesEntities();
+            model = new Employees();
         }
-
-        public void FormView1_InsertItem()
+        protected void makeModel()
         {
-            var item = new EmployeesForms.Employees();
-            TryUpdateModel(item);
-            item.Job_id = jobNumber;
-            if (ModelState.IsValid)
-            {
-                db.Employees.Add(item);
-            }
+            model.First_name = FirstNameTextBox.Text;
+            model.Last_name = LastNameTextBox.Text;
+            model.Salary = double.Parse(SalaryTextBox.Text);
+            model.Job_id = int.Parse(JobDropDownList.SelectedValue);
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var employer = new Employees();
-            employer.First_name = FirstNameTextBox.Text;
-            employer.Last_name = LastNameTextBox.Text;
-            employer.Salary = Double.Parse(SalaryTextBox.Text);
-            employer.Job_id = Int32.Parse(JobDropDownList.SelectedValue);
-            db.Employees.Add(employer);
-            db.SaveChanges();
+            try {
+                makeModel();
+                db.Employees.Add(model);
+                db.SaveChanges();
+                Response.Redirect("~/", false);
+                Context.ApplicationInstance.CompleteRequest();
+            }
+            catch(Exception ex)
+            {
+                Response.Redirect("~/Error");
+            }
         }
     }
 }

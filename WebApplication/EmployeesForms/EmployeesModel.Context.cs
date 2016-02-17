@@ -13,10 +13,10 @@ namespace EmployeesForms
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EmployeesDBEntities : DbContext
+    public partial class JobsEmployeesEntities : DbContext
     {
-        public EmployeesDBEntities()
-            : base("name=EmployeesDBEntities")
+        public JobsEmployeesEntities()
+            : base("name=JobsEmployeesEntities")
         {
         }
     
